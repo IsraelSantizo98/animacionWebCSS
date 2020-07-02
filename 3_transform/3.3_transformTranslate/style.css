@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  perspective: 200px;
+  /* perspective-origin: top;
+  perspective-origin: left, right, top, bottom, center; */
+  perspective-origin: center;
+}
+.wrapper {
+  border: 1px solid red;
+}
+.itemCuadrado {
+  width: 200px;
+  height: 200px;
+  background-color: #1c3643;
+  margin: 20px;
+  transition: 1.5s;
+}
+.wrapper:hover .itemCuadrado {
+  background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+  /*Mueve 100px el contendio a la derecha eje X*/
+  /* transform: translate(100px); */
+  /*Para moverl el contenido en ambos ejes*/
+  /* transform: translate(-100px, 100px); */
+  /* transform: translateZ(-100px); */
+  /* transform: translate3d(x, y, z); */
+  transform: translate3d(-100px, -100px, 100px);
+}
