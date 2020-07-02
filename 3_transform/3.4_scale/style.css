@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.wrapper {
+  border: 1px solid red;
+}
+.itemCuadrado {
+  width: 200px;
+  height: 200px;
+  background-color: #1c3643;
+  margin: 20px;
+  transition: 1.5s;
+}
+.wrapper:hover .itemCuadrado {
+  background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+}
