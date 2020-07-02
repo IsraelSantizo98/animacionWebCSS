@@ -1,0 +1,39 @@
+/*
+Animacion es la union de transform y transition
+*/
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans - serif;
+}
+.wrapper {
+  border: 1px solid red;
+}
+.itemCuadrado {
+  /* transform-origin: right top; */
+  width: 200px;
+  height: 200px;
+  background-color: #7cd900;
+  margin: 20px;
+  /* animation */
+  animation-name: cuadrado;
+  animation-duration: 2s;
+  /* animation-delay: 1s; */
+  /*Animacion infinita*/
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+@keyframes cuadrado {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.wrapper:hover.itemCuadrado {
+  background-color: blue;
+}

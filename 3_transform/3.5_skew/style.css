@@ -1,5 +1,5 @@
 /*
-Sirve para aumentar o disminur el tamaño del contendido pero de una forma vectorial lo que hace que no pierde resolucion, todo en su contendido se escala si hay texto este tambien se ve afectado
+Sirve para sesgar el contendio se mide en grados
 */
 body {
   display: flex;
@@ -21,8 +21,7 @@ body {
 }
 .wrapper:hover .itemCuadrado {
   background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
-  /* transform: scale(0 = 0% del tamaño y el 1 es el 100%); */
-  transform: scale(0.5);
-  /*Declaracion para manejar el ancho y el alto*/
-  transform: scale(2, 0.5);
+  transform: skew(45deg);
+  /*Declaracon de ambos ejes*/
+  transform: skew(45deg, 45deg);
 }
