@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.wrapper {
+  border: 1px solid black;
+  height: 100px;
+  width: 100%;
+  position: relative;
+  transform: rotate(5deg) skew(10deg) translate(100px) scale(1.5);
+}
+.item {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  transition: 1s;
+}
+.item.a {
+  background: blue;
+  left: 0;
+}
+.wrapper:hover .item.a {
+  left: calc(50% - 100px);
+  border-radius: 25px;
+  transform: rotate(360deg);
+  background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+}
+.item.b {
+  background: green;
+  right: 0;
+}
+.wrapper:hover .item.b {
+  right: calc(50% - 100px);
+  border-radius: 25px;
+  transform: rotate(360deg);
+  background: linear-gradient(90deg, #1e5372, #273b47 25%, #1c3643);
+}
