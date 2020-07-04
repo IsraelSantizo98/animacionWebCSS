@@ -15,7 +15,7 @@
   transition-property: width, height, border-radius, transform;
   /*Tiempo para que inicie la transicion*/
   /* transition-delay: 1s; */
-  transition-duration: 1s;
+  transition-duration: 0.8s;
   /*Velocidad del efecto en la transicion, linear, ease, ease-in, ease-out, */
   transition-timing-function: ease;
   /*Forma abreviada*/

@@ -11,8 +11,13 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans - serif;
 }
 .wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: ". b ." "a a a" ". . . ";
   border: 1px solid red;
   width: 100%;
+  transition: ;
 }
 .itemCuadrado {
   display: flex;
@@ -41,9 +46,34 @@ body {
   100% {
     /* opacity: 0; */
     left: calc(100% - 240px);
+    background-color: black;
+    color: #fff;
   }
 }
 .wrapper:hover .itemCuadrado {
   background-color: blue;
   /* animation-play-state: paused; */
+}
+.itemCuadrado.a {
+  grid-area: a;
+}
+.itemCuadrado.a:hover {
+  transform: skew(340deg);
+  transform: rotate(360deg);
+  border-radius: 0;
+  animation-play-state: paused;
+  background-color: aqua;
+}
+.itemCuadrado.b {
+  grid-area: b;
+  position: absolute;
+  top: 0;
+  right: 100px;
+  left: 100px;
+  bottom: 0;
+}
+.itemCuadrado.b:hover {
+  animation-play-state: paused;
+  top: 0;
+  top: 500px;
 }
