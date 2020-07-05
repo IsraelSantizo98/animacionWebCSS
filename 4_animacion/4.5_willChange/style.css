@@ -1,0 +1,67 @@
+/*7171902*/
+/*
+Animacion es la union de transform y transition
+*/
+body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans - serif;
+  background-color: #000;
+}
+.wrapper {
+  border: 1px solid red;
+  width: 100%;
+}
+.wrapper:hover .itemCuadrado {
+  background-color: blue;
+  animation-play-state: paused;
+}
+.itemCuadrado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #7cd900;
+  margin: 20px;
+  border-radius: 50%;
+  animation-name: cuadrado, rebote;
+  animation-duration: 3s, 0.3s;
+  animation-iteration-count: infinite, 20;
+  animation-timing-function: linear, ease-in-out;
+  animation-direction: alternate;
+}
+@keyframes cuadrado {
+  0% {
+    /* opacity: 1; */
+    left: 0;
+  }
+  100% {
+    /* opacity: 0; */
+    left: calc(100% - 240px);
+  }
+}
+@keyframes escalera {
+  form {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(500px);
+  }
+}
+@keyframes rebote {
+  /*Es equivalente a declarar 0%*/
+  form {
+    /*Se transforma desde 0*/
+    transform: translateY(0);
+  }
+  /*Es equivalente a declarar 100%*/
+  to {
+    /*Se cambia para que rebote la animacion 100px para abajo*/
+    transform: translateY(100px) scale(1, 0.8);
+  }
+}

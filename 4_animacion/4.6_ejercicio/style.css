@@ -1,0 +1,79 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #d1d1d1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+.presentacion {
+  /* animation-name: moverObjeto; */
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+@keyframes moverObjeto {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+.lista {
+  overflow: hidden;
+  display: inline-block;
+  /* border: 1px solid; */
+  /* La altura esta definida por= 36px de alto de linea del .titulo / 32px de fuente del titulo */
+  height: 1.125em;
+  /* El margin-bottom es para corregir que todos esten a la misma altura */
+  /* necesitaba solo 1px entonces= 1px / 32px de fuente del titulo =0,03125‬ */
+  margin-bottom: -0.03125em;
+  line-height: 1em;
+  vertical-align: bottom;
+  padding: 0;
+}
+span {
+  color: #3fc5f0;
+}
+.item {
+  list-style: none;
+  font-weight: 400;
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #3fc5f0;
+  /* border: 1px solid black; */
+}
+.item:first-child {
+  animation-name: moverY;
+  animation-duration: 2.5s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  /* animation-fill-mode: ; */
+}
+@keyframes moverY {
+  0% {
+    /* opacity: 0; */
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -1.5em;
+  }
+  100% {
+    margin-top: -2.9em;
+    animation-delay: 0.5s;
+  }
+}
